@@ -1,0 +1,152 @@
+/* =========================================
+   ТЕМНАЯ ТЕМА (Tokyo Night Dark)
+   ========================================= */
+body.theme-dark {
+	/* --- ФОНЫ --- */
+	--background-primary: #1a1b26;
+	--background-primary-alt: #1f2335;
+	--background-secondary: #16161e;
+	--background-modifier-border: #24283b;
+
+	/* --- ТЕКСТ --- */
+	--text-normal: #c0caf5;
+	--text-muted: #a9b1d6;
+	--text-faint: #565f89;
+	
+	/* --- ССЫЛКИ И АКЦЕНТЫ --- */
+	--text-accent: #7aa2f7;
+	--text-accent-hover: #2ac3de;
+	--interactive-accent: #7aa2f7;
+	--interactive-accent-hover: #2ac3de;
+	--text-on-accent: #1a1b26;
+
+	/* --- ЗАГОЛОВКИ --- */
+	--h1-color: #7aa2f7; /* Синий */
+	--h2-color: #bb9af7; /* Фиолетовый */
+	--h3-color: #7dcfff; /* Голубой */
+	--h4-color: #9ece6a; /* Зеленый */
+	--h5-color: #e0af68; /* Желтый */
+	--h6-color: #f7768e; /* Красный */
+
+	/* --- КОНТРАСТНЫЙ ТЕКСТ --- */
+	--bold-color: #ff9e64;               /* Жирный (оранжевый) */
+	--italic-color: #7dcfff;             /* Курсив (голубой) */
+	--bold-italic-color: #bb9af7;        /* Жирный курсив (фиолетовый) */
+
+	/* --- ВЫДЕЛЕНИЯ --- */
+	--caret-color: #7aa2f7;
+	--text-selection: rgba(122, 162, 247, 0.3);
+	--text-highlight-bg: rgba(122, 162, 247, 0.2); 
+	--blockquote-background-color: rgba(187, 154, 247, 0.05);
+	--blockquote-border-color: #bb9af7;
+}
+
+/* =========================================
+   СВЕТЛАЯ ТЕМА (Tokyo Night Day)
+   ========================================= */
+body.theme-light {
+	/* --- ФОНЫ --- */
+	--background-primary: #e1e2e7;
+	--background-primary-alt: #d0d5e3;
+	--background-secondary: #e9e9ed;
+	--background-modifier-border: #c4c8da;
+
+	/* --- ТЕКСТ --- */
+	--text-normal: #3760bf;
+	--text-muted: #6172b0;
+	--text-faint: #a8aecb;
+	
+	/* --- ССЫЛКИ И АКЦЕНТЫ --- */
+	--text-accent: #2e7de9;
+	--text-accent-hover: #1b52c4;
+	--interactive-accent: #2e7de9;
+	--interactive-accent-hover: #1b52c4;
+	--text-on-accent: #e1e2e7;
+
+	/* --- ЗАГОЛОВКИ --- */
+	--h1-color: #2e7de9; /* Синий */
+	--h2-color: #9854f1; /* Фиолетовый */
+	--h3-color: #007197; /* Бирюзовый */
+	--h4-color: #587539; /* Зеленый */
+	--h5-color: #8c6c3e; /* Желтый */
+	--h6-color: #f52a65; /* Красный */
+
+	/* --- КОНТРАСТНЫЙ ТЕКСТ --- */
+	--bold-color: #b15c00;               /* Жирный (темно-оранжевый) */
+	--italic-color: #007197;             /* Курсив (бирюзовый) */
+	--bold-italic-color: #9854f1;        /* Жирный курсив (фиолетовый) */
+
+	/* --- ВЫДЕЛЕНИЯ --- */
+	--caret-color: #2e7de9;
+	--text-selection: rgba(46, 125, 233, 0.2);
+	--text-highlight-bg: rgba(46, 125, 233, 0.15); 
+	--blockquote-background-color: rgba(152, 84, 241, 0.05);
+	--blockquote-border-color: #9854f1;
+}
+
+/* =========================================
+   ОБЩИЕ НАСТРОЙКИ (Для обеих тем)
+   ========================================= */
+body {
+	/* Жирный текст */
+	--bold-modifier: var(--font-semibold);
+
+	/* Цитаты */
+	--blockquote-font-style: italic;
+	--blockquote-border-thickness: 4px;
+
+	/* Вложения */
+	--embed-font-style: italic;
+	--embed-padding: 0 25px;
+
+	/* Таблицы */
+	--table-background: transparent;
+	--table-border-width: 1px;
+	--table-header-font-weight: bold;
+	
+	/* Разделители */
+	--hr-thickness: 2px;
+}
+
+/* Оформление меню и интерфейса */
+.menu { padding: var(--size-2-1); }
+.menu-item { padding: var(--size-4-1) var(--size-4-2); }
+.menu-separator { margin: var(--size-2-1) calc(var(--size-2-1) * -1); }
+
+/* Убираем полоски у вкладок */
+.workspace-tab-header.is-active::before,
+.workspace-tab-header.is-active::after {
+	display: none;
+}
+
+/* Красивое оформление встроенного кода (в обратных кавычках) */
+.cm-s-obsidian span.cm-inline-code {
+	border-radius: 4px;
+	padding: 2px 4px;
+}
+body.theme-dark .cm-s-obsidian span.cm-inline-code {
+	color: #7dcfff;
+	background-color: #24283b;
+}
+body.theme-light .cm-s-obsidian span.cm-inline-code {
+	color: #007197;
+	background-color: #d0d5e3;
+}
+
+/* Иконки PDF */
+.nav-file-title[data-path$=".pdf"] .nav-file-tag {
+	font-weight: bold;
+}
+body.theme-dark .nav-file-title[data-path$=".pdf"] .nav-file-tag {
+	background-color: #f7768e;
+	color: #1a1b26;
+}
+body.theme-light .nav-file-title[data-path$=".pdf"] .nav-file-tag {
+	background-color: #f52a65;
+	color: #e1e2e7;
+}
+
+/* Скругление картинок */
+img {
+	border-radius: 4px;
+}
