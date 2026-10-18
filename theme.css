@@ -21,17 +21,17 @@ body.theme-dark {
 	--text-on-accent: #1a1b26;
 
 	/* --- ЗАГОЛОВКИ --- */
-	--h1-color: #7aa2f7; /* Синий */
-	--h2-color: #bb9af7; /* Фиолетовый */
-	--h3-color: #7dcfff; /* Голубой */
-	--h4-color: #9ece6a; /* Зеленый */
-	--h5-color: #e0af68; /* Желтый */
-	--h6-color: #f7768e; /* Красный */
+	--h1-color: #7aa2f7;
+	--h2-color: #bb9af7;
+	--h3-color: #7dcfff;
+	--h4-color: #9ece6a;
+	--h5-color: #e0af68;
+	--h6-color: #f7768e;
 
 	/* --- КОНТРАСТНЫЙ ТЕКСТ --- */
-	--bold-color: #ff9e64;               /* Жирный (оранжевый) */
-	--italic-color: #7dcfff;             /* Курсив (голубой) */
-	--bold-italic-color: #bb9af7;        /* Жирный курсив (фиолетовый) */
+	--bold-color: #ff9e64;
+	--italic-color: #7dcfff;
+	--bold-italic-color: #bb9af7;
 
 	/* --- ВЫДЕЛЕНИЯ --- */
 	--caret-color: #7aa2f7;
@@ -39,6 +39,20 @@ body.theme-dark {
 	--text-highlight-bg: rgba(122, 162, 247, 0.2); 
 	--blockquote-background-color: rgba(187, 154, 247, 0.05);
 	--blockquote-border-color: #bb9af7;
+
+	/* --- БЛОКИ КОДА (Светлее фона для выделения) --- */
+	--code-background: #1f2335; /* Чуть светлее основного фона */
+	--code-normal: #c0caf5;
+	--code-comment: #565f89;
+	--code-function: #7aa2f7;
+	--code-keyword: #bb9af7;
+	--code-operator: #89ddff;
+	--code-property: #73daca;
+	--code-punctuation: #a9b1d6;
+	--code-string: #9ece6a;
+	--code-tag: #f7768e;
+	--code-value: #e0af68;
+	--code-important: #ff9e64;
 }
 
 /* =========================================
@@ -64,17 +78,17 @@ body.theme-light {
 	--text-on-accent: #e1e2e7;
 
 	/* --- ЗАГОЛОВКИ --- */
-	--h1-color: #2e7de9; /* Синий */
-	--h2-color: #9854f1; /* Фиолетовый */
-	--h3-color: #007197; /* Бирюзовый */
-	--h4-color: #587539; /* Зеленый */
-	--h5-color: #8c6c3e; /* Желтый */
-	--h6-color: #f52a65; /* Красный */
+	--h1-color: #2e7de9;
+	--h2-color: #9854f1;
+	--h3-color: #007197;
+	--h4-color: #587539;
+	--h5-color: #8c6c3e;
+	--h6-color: #f52a65;
 
 	/* --- КОНТРАСТНЫЙ ТЕКСТ --- */
-	--bold-color: #b15c00;               /* Жирный (темно-оранжевый) */
-	--italic-color: #007197;             /* Курсив (бирюзовый) */
-	--bold-italic-color: #9854f1;        /* Жирный курсив (фиолетовый) */
+	--bold-color: #b15c00;
+	--italic-color: #007197;
+	--bold-italic-color: #9854f1;
 
 	/* --- ВЫДЕЛЕНИЯ --- */
 	--caret-color: #2e7de9;
@@ -82,6 +96,20 @@ body.theme-light {
 	--text-highlight-bg: rgba(46, 125, 233, 0.15); 
 	--blockquote-background-color: rgba(152, 84, 241, 0.05);
 	--blockquote-border-color: #9854f1;
+
+	/* --- БЛОКИ КОДА (Темнее фона для выделения) --- */
+	--code-background: #d0d5e3; /* Чуть темнее основного фона */
+	--code-normal: #3760bf;
+	--code-comment: #848cb5;
+	--code-function: #2e7de9;
+	--code-keyword: #9854f1;
+	--code-operator: #007197;
+	--code-property: #007197;
+	--code-punctuation: #6172b0;
+	--code-string: #587539;
+	--code-tag: #f52a65;
+	--code-value: #8c6c3e;
+	--code-important: #b15c00;
 }
 
 /* =========================================
@@ -119,7 +147,20 @@ body {
 	display: none;
 }
 
-/* Красивое оформление встроенного кода (в обратных кавычках) */
+/* =========================================
+   КАСТОМИЗАЦИЯ БЛОКОВ КОДА (Рамка и Скругления)
+   ========================================= */
+/* Применяется и к режиму чтения, и к режиму редактирования */
+.markdown-rendered pre, 
+.markdown-source-view.mod-cm6 .cm-block-code {
+	background-color: var(--code-background) !important;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	padding: 10px 14px;
+	margin: 1em 0;
+}
+
+/* Встроенный код (в обратных кавычках) */
 .cm-s-obsidian span.cm-inline-code {
 	border-radius: 4px;
 	padding: 2px 4px;
