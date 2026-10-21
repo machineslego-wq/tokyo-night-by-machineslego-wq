@@ -200,7 +200,6 @@ mark {
 }
 
 /* Режим редактирования (Live Preview) */
-/* 1. Убираем полоску и задаем фон всему блоку */
 .markdown-source-view.mod-cm6 .HyperMD-quote {
 	background-color: color-mix(in srgb, var(--blockquote-border-color) 20%, transparent) !important;
 	border-left: none !important;
@@ -209,64 +208,22 @@ mark {
 	padding-bottom: 4px !important;
 }
 
-/* 2. Убираем полоску и стандартные отступы у каждой строки цитаты */
-/* ВАЖНО: Мы убрали !important у цвета, чтобы выделение == могло менять его */
 .markdown-source-view.mod-cm6 .cm-quote {
 	border-left: none !important;
 	color: var(--text-muted);
 }
 
-/* 3. Задаем отступ для текста внутри строки */
 .markdown-source-view.mod-cm6 .cm-line.cm-quote {
 	padding-left: 12px !important;
 	padding-right: 12px !important;
 }
 
-/* =========================================
-   04. БЛОКИ (Цитаты, Callouts, Код)
-   ========================================= */
-
-/* --- ЦИТАТЫ (> ) --- */
-/* Режим чтения (Read Mode) */
-.markdown-rendered blockquote {
-	padding: 12px 16px;
-	border-radius: 4px;
-	margin: 1em 0;
-	background-color: color-mix(in srgb, var(--blockquote-border-color) 20%, transparent) !important;
-	color: var(--text-muted);
-	border-left: none !important;
-}
-
-/* Режим редактирования (Live Preview) */
-/* 1. Убираем полоску и задаем фон всему блоку */
-.markdown-source-view.mod-cm6 .HyperMD-quote {
-	background-color: color-mix(in srgb, var(--blockquote-border-color) 20%, transparent) !important;
-	border-left: none !important;
-	border-radius: 4px;
-	padding-top: 4px !important;
-	padding-bottom: 4px !important;
-}
-
-/* 2. Убираем полоску и стандартные отступы у каждой строки цитаты */
-.markdown-source-view.mod-cm6 .cm-quote {
-	border-left: none !important;
-	color: var(--text-muted) !important;
-}
-
-/* 3. Задаем отступ для текста внутри строки, чтобы он не прилипал к краю */
-.markdown-source-view.mod-cm6 .cm-line.cm-quote {
-	padding-left: 12px !important;
-	padding-right: 12px !important;
-}
-
-/* Фикс для выделения (==) в редакторе, чтобы не было рамок */
 .cm-s-obsidian span.cm-highlight {
 	padding: 0 2px !important;
 	border-radius: 2px;
 }
 
 /* --- CALLOUTS (Плашки) --- */
-/* Базовый фолбэк для кастомных тегов */
 .callout {
 	--callout-color: 122, 162, 247; 
 	box-shadow: none !important;
@@ -275,7 +232,6 @@ mark {
 	background-color: rgba(var(--callout-color), 0.9) !important; 
 }
 
-/* Убираем полоску у Callouts в режиме редактирования */
 .cm-s-obsidian .cm-callout,
 .cm-s-obsidian .callout {
 	border-left: none !important;
@@ -284,32 +240,31 @@ mark {
 /* Явные цвета для стандартных тегов */
 .callout[data-callout="note"],
 .callout[data-callout="info"],
-.callout[data-callout="todo"] { --callout-color: 122, 162, 247; } /* Синий */
+.callout[data-callout="todo"] { --callout-color: 122, 162, 247; }
 
 .callout[data-callout="tip"],
 .callout[data-callout="hint"],
 .callout[data-callout="success"],
 .callout[data-callout="check"],
-.callout[data-callout="done"] { --callout-color: 158, 206, 106; } /* Зеленый */
+.callout[data-callout="done"] { --callout-color: 158, 206, 106; }
 
 .callout[data-callout="warning"],
 .callout[data-callout="caution"],
-.callout[data-callout="attention"] { --callout-color: 224, 175, 104; } /* Желтый */
+.callout[data-callout="attention"] { --callout-color: 224, 175, 104; }
 
 .callout[data-callout="danger"],
 .callout[data-callout="error"],
 .callout[data-callout="bug"],
 .callout[data-callout="failure"],
 .callout[data-callout="fail"],
-.callout[data-callout="missing"] { --callout-color: 247, 118, 142; } /* Красный */
+.callout[data-callout="missing"] { --callout-color: 247, 118, 142; }
 
 .callout[data-callout="quote"],
 .callout[data-callout="cite"],
 .callout[data-callout="abstract"],
 .callout[data-callout="summary"],
-.callout[data-callout="tldr"] { --callout-color: 187, 154, 247; } /* Фиолетовый */
+.callout[data-callout="tldr"] { --callout-color: 187, 154, 247; }
 
-/* Контрастный текст и иконки внутри коллаутов */
 .callout, 
 .callout-title, 
 .callout-content, 
@@ -319,8 +274,31 @@ mark {
 .callout-title { font-weight: 700; font-size: 1.05em; }
 .callout-icon svg { stroke: var(--text-on-accent) !important; }
 
+/* --- ФИКС ЖИРНОГО И КУРСИВА В CALLOUTS --- */
+.callout strong, 
+.callout .cm-strong {
+	color: inherit !important;
+	font-weight: 900 !important;
+}
+
+.callout em, 
+.callout .cm-em {
+	color: inherit !important;
+	font-weight: bold !important;
+	text-decoration: underline !important;
+}
+
+.callout strong em, 
+.callout em strong,
+.callout .cm-strong.cm-em,
+.callout .cm-em.cm-strong {
+	color: inherit !important;
+	font-weight: 900 !important;
+	text-decoration: underline !important;
+	text-shadow: none !important;
+}
+
 /* --- БЛОКИ КОДА (```) --- */
-/* Режим чтения */
 .markdown-rendered pre {
 	background-color: var(--code-background) !important;
 	border: 1px solid var(--background-modifier-border);
@@ -330,7 +308,6 @@ mark {
 	box-shadow: none !important;
 }
 
-/* Режим редактирования (Live Preview) */
 .cm-s-obsidian .HyperMD-codeblock {
 	background-color: var(--code-background) !important;
 	font-family: var(--font-monospace);
@@ -344,37 +321,100 @@ mark {
 .cm-s-obsidian .HyperMD-codeblock-end { border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; border-bottom: 1px solid var(--background-modifier-border); }
 
 /* =========================================
-   ФИКС ЖИРНОГО И КУРСИВА В CALLOUTS
+   05. ССЫЛКИ (Links)
    ========================================= */
-
-/* 1. Жирный текст внутри Callout */
-.callout strong, 
-.callout .cm-strong {
-	color: inherit !important; /* Берем цвет текста от Callout (темный или светлый) */
-	font-weight: 900 !important; /* Делаем максимально жирным, чтобы отличался */
+a.internal-link,
+a.external-link,
+.cm-s-obsidian span.cm-link,
+.cm-s-obsidian span.cm-url {
+    color: var(--text-accent) !important;
+    text-decoration: underline !important;
+    text-decoration-color: color-mix(in srgb, var(--text-accent) 50%, transparent) !important;
+    text-underline-offset: 3px;
+    transition: all 0.2s ease;
 }
 
-/* 2. Курсив внутри Callout */
-.callout em, 
-.callout .cm-em {
-	color: inherit !important;
-	font-weight: bold !important; /* Добавляем жирность, как ты и хотел для курсива */
-	text-decoration: underline !important; /* Подчеркиваем для 100% читаемости */
+a.internal-link:hover,
+a.external-link:hover,
+.cm-s-obsidian span.cm-link:hover {
+    color: var(--text-accent-hover) !important;
+    text-decoration-color: var(--text-accent-hover) !important;
+    background-color: color-mix(in srgb, var(--text-accent) 10%, transparent);
+    border-radius: 2px;
 }
 
-/* 3. Жирный курсив внутри Callout */
-.callout strong em, 
-.callout em strong,
-.callout .cm-strong.cm-em,
-.callout .cm-em.cm-strong {
-	color: inherit !important;
-	font-weight: 900 !important;
-	text-decoration: underline !important;
-	text-shadow: none !important; /* Убираем свечение, оно тут лишнее */
+/* Неразрешенные ссылки */
+a.internal-link.is-unresolved,
+.cm-s-obsidian span.cm-link.is-unresolved {
+    color: var(--text-faint) !important;
+    text-decoration-style: dashed !important;
 }
 
 /* =========================================
-   05. ДОПОЛНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ
+   06. ТЕГИ (Оранжевый бейдж)
+   ========================================= */
+body {
+    --tag-color: #1a1b26 !important;
+    --tag-background: #ff9e64 !important;
+    --tag-color-hover: #1a1b26 !important;
+    --tag-background-hover: #ff9e64 !important;
+    --tag-border-color: transparent !important;
+    --tag-radius: 15px !important; /* Радиус 15px */
+}
+
+/* --- Режим чтения (Read Mode) --- */
+a.tag {
+    color: #1a1b26 !important;
+    background-color: #ff9e64 !important;
+    border-radius: 15px !important;
+    padding: 4px 12px !important; /* Увеличенные внутренние отступы */
+    margin: 0 6px !important; /* Отступы от текста */
+    text-decoration: none !important;
+    font-weight: bold !important; /* Жирный текст */
+    display: inline-block;
+    line-height: 1.2;
+}
+
+/* --- Режим редактирования (Live Preview) --- */
+.cm-s-obsidian span.cm-hashtag {
+    color: #1a1b26 !important;
+    background-color: #ff9e64 !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+/* Начало тега # (левая часть таблетки) */
+.cm-s-obsidian span.cm-hashtag-begin {
+    padding: 4px 0 4px 12px !important; /* Внутренний отступ слева */
+    border-radius: 15px 0 0 15px !important; /* Скругление слева */
+    margin-left: 6px !important; /* Отступ от предыдущего текста */
+}
+
+/* Конец тега (правая часть таблетки) */
+.cm-s-obsidian span.cm-hashtag-end {
+    padding: 4px 12px 4px 0 !important; /* Внутренний отступ справа */
+    border-radius: 0 15px 15px 0 !important; /* Скругление справа */
+    margin-right: 6px !important; /* Отступ от следующего текста */
+}
+
+/* Середина тега (основной текст) */
+.cm-s-obsidian span.cm-hashtag-middle {
+    padding: 4px 0 !important;
+}
+
+/* --- Фикс для мобилок --- */
+body.is-mobile .tag,
+body.is-mobile .cm-hashtag,
+body.is-mobile .cm-hashtag-begin,
+body.is-mobile .cm-hashtag-middle,
+body.is-mobile .cm-hashtag-end {
+    color: #1a1b26 !important;
+    background-color: #ff9e64 !important;
+    border-radius: 15px !important;
+}
+
+/* =========================================
+   07. ДОПОЛНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ
    ========================================= */
 
 /* Иконки PDF */

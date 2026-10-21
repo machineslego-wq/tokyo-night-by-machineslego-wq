@@ -61,7 +61,7 @@ This is the most reliable method if you want to install the theme directly from 
 If you prefer to download a packaged release:
 
 1. Go to the [Releases](https://github.com/machineslego-wq/tokyo-night-by-machineslego-wq/releases) page.
-2. Download the latest `.zip` file (e.g., `tokyo-night-flat-v1.0.0.zip`).
+2. Download the latest `.zip` file (e.g., `tokyo-night-flat-v1.0.1.zip`).
 3. Extract the archive into your vault's `.obsidian/themes/` directory.
    *Ensure the final path looks like: `<vault>/.obsidian/themes/Tokyo Night Flat/`*
 4. Restart Obsidian, go to **Settings → Appearance → Themes**, and select **Tokyo Night Flat**.

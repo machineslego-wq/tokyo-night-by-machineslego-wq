@@ -61,7 +61,7 @@
 Если вы предпочитаете скачивать готовый архив:
 
 1. Перейдите на страницу [Releases](https://github.com/machineslego-wq/tokyo-night-by-machineslego-wq/releases).
-2. Скачайте последний `.zip` файл (например, `tokyo-night-flat-v1.0.0.zip`).
+2. Скачайте последний `.zip` файл (например, `tokyo-night-flat-v1.0.1.zip`).
 3. Распакуйте архив в папку `.obsidian/themes/` вашего хранилища.
    *Убедитесь, что итоговый путь выглядит так: `<хранилище>/.obsidian/themes/Tokyo Night Flat/`*
 4. Перезапустите Obsidian, зайдите в **Настройки → Внешний вид → Темы** и выберите **Tokyo Night Flat**.
