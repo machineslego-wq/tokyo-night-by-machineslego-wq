@@ -1,26 +1,29 @@
 /* =========================================
-   ТЕМНАЯ ТЕМА (Tokyo Night Dark)
+   TOKYO NIGHT FLAT THEME ДЛЯ OBSIDIAN
+   (Строгий дизайн, яркие акценты, Edit = Read)
    ========================================= */
+
+/* =========================================
+   01. ПЕРЕМЕННЫЕ ТЕМЫ
+   ========================================= */
+
+/* --- ТЕМНАЯ ТЕМА (Tokyo Night) --- */
 body.theme-dark {
-	/* --- ФОНЫ --- */
 	--background-primary: #1a1b26;
 	--background-primary-alt: #1f2335;
 	--background-secondary: #16161e;
 	--background-modifier-border: #24283b;
 
-	/* --- ТЕКСТ --- */
 	--text-normal: #c0caf5;
 	--text-muted: #a9b1d6;
 	--text-faint: #565f89;
 	
-	/* --- ССЫЛКИ И АКЦЕНТЫ --- */
 	--text-accent: #7aa2f7;
 	--text-accent-hover: #2ac3de;
 	--interactive-accent: #7aa2f7;
 	--interactive-accent-hover: #2ac3de;
 	--text-on-accent: #1a1b26;
 
-	/* --- ЗАГОЛОВКИ --- */
 	--h1-color: #7aa2f7;
 	--h2-color: #bb9af7;
 	--h3-color: #7dcfff;
@@ -28,20 +31,18 @@ body.theme-dark {
 	--h5-color: #e0af68;
 	--h6-color: #f7768e;
 
-	/* --- КОНТРАСТНЫЙ ТЕКСТ --- */
 	--bold-color: #ff9e64;
-	--italic-color: #7dcfff;
+	--italic-color: #2ac3de;
 	--bold-italic-color: #bb9af7;
 
-	/* --- ВЫДЕЛЕНИЯ --- */
 	--caret-color: #7aa2f7;
 	--text-selection: rgba(122, 162, 247, 0.3);
-	--text-highlight-bg: rgba(122, 162, 247, 0.2); 
-	--blockquote-background-color: rgba(187, 154, 247, 0.05);
+	--text-highlight-bg: #e0af68;
+	
+	--blockquote-background-color: transparent;
 	--blockquote-border-color: #bb9af7;
 
-	/* --- БЛОКИ КОДА (Светлее фона для выделения) --- */
-	--code-background: #1f2335; /* Чуть светлее основного фона */
+	--code-background: #1f2335;
 	--code-normal: #c0caf5;
 	--code-comment: #565f89;
 	--code-function: #7aa2f7;
@@ -55,29 +56,23 @@ body.theme-dark {
 	--code-important: #ff9e64;
 }
 
-/* =========================================
-   СВЕТЛАЯ ТЕМА (Tokyo Night Day)
-   ========================================= */
+/* --- СВЕТЛАЯ ТЕМА (Tokyo Night Day) --- */
 body.theme-light {
-	/* --- ФОНЫ --- */
 	--background-primary: #e1e2e7;
 	--background-primary-alt: #d0d5e3;
 	--background-secondary: #e9e9ed;
 	--background-modifier-border: #c4c8da;
 
-	/* --- ТЕКСТ --- */
 	--text-normal: #3760bf;
 	--text-muted: #6172b0;
 	--text-faint: #a8aecb;
 	
-	/* --- ССЫЛКИ И АКЦЕНТЫ --- */
 	--text-accent: #2e7de9;
 	--text-accent-hover: #1b52c4;
 	--interactive-accent: #2e7de9;
 	--interactive-accent-hover: #1b52c4;
 	--text-on-accent: #e1e2e7;
 
-	/* --- ЗАГОЛОВКИ --- */
 	--h1-color: #2e7de9;
 	--h2-color: #9854f1;
 	--h3-color: #007197;
@@ -85,20 +80,18 @@ body.theme-light {
 	--h5-color: #8c6c3e;
 	--h6-color: #f52a65;
 
-	/* --- КОНТРАСТНЫЙ ТЕКСТ --- */
 	--bold-color: #b15c00;
 	--italic-color: #007197;
 	--bold-italic-color: #9854f1;
 
-	/* --- ВЫДЕЛЕНИЯ --- */
 	--caret-color: #2e7de9;
 	--text-selection: rgba(46, 125, 233, 0.2);
-	--text-highlight-bg: rgba(46, 125, 233, 0.15); 
-	--blockquote-background-color: rgba(152, 84, 241, 0.05);
+	--text-highlight-bg: #e0af68;
+	
+	--blockquote-background-color: transparent;
 	--blockquote-border-color: #9854f1;
 
-	/* --- БЛОКИ КОДА (Темнее фона для выделения) --- */
-	--code-background: #d0d5e3; /* Чуть темнее основного фона */
+	--code-background: #d0d5e3;
 	--code-normal: #3760bf;
 	--code-comment: #848cb5;
 	--code-function: #2e7de9;
@@ -113,70 +106,251 @@ body.theme-light {
 }
 
 /* =========================================
-   ОБЩИЕ НАСТРОЙКИ (Для обеих тем)
+   02. ГЛОБАЛЬНЫЕ НАСТРОЙКИ И UI (Плоский дизайн)
    ========================================= */
 body {
-	/* Жирный текст */
 	--bold-modifier: var(--font-semibold);
-
-	/* Цитаты */
 	--blockquote-font-style: italic;
 	--blockquote-border-thickness: 4px;
-
-	/* Вложения */
-	--embed-font-style: italic;
-	--embed-padding: 0 25px;
-
-	/* Таблицы */
 	--table-background: transparent;
 	--table-border-width: 1px;
 	--table-header-font-weight: bold;
-	
-	/* Разделители */
 	--hr-thickness: 2px;
 }
 
-/* Оформление меню и интерфейса */
-.menu { padding: var(--size-2-1); }
-.menu-item { padding: var(--size-4-1) var(--size-4-2); }
-.menu-separator { margin: var(--size-2-1) calc(var(--size-2-1) * -1); }
+/* Убираем тени у меню, модалок и всплывающих окон */
+.menu, .modal, .prompt, .suggestion-container, .popover {
+	box-shadow: none !important;
+	border: 1px solid var(--background-modifier-border) !important;
+	border-radius: 4px !important;
+}
 
-/* Убираем полоски у вкладок */
+/* Убираем полоски у активных вкладок */
 .workspace-tab-header.is-active::before,
 .workspace-tab-header.is-active::after {
 	display: none;
 }
 
 /* =========================================
-   КАСТОМИЗАЦИЯ БЛОКОВ КОДА (Рамка и Скругления)
+   03. ТИПОГРАФИЯ И ИНЛАЙН-ЭЛЕМЕНТЫ
    ========================================= */
-/* Применяется и к режиму чтения, и к режиму редактирования */
-.markdown-rendered pre, 
-.markdown-source-view.mod-cm6 .cm-block-code {
-	background-color: var(--code-background) !important;
-	border: 1px solid var(--background-modifier-border);
-	border-radius: 6px;
-	padding: 10px 14px;
-	margin: 1em 0;
+
+/* --- ЖИРНЫЙ (Bold) --- */
+strong,
+.cm-strong,
+.markdown-rendered strong {
+	color: var(--bold-color) !important;
 }
 
-/* Встроенный код (в обратных кавычках) */
-.cm-s-obsidian span.cm-inline-code {
+/* --- КУРСИВ (Italic) --- */
+em, i,
+.cm-em,
+.markdown-rendered em {
+	font-weight: bolder;
+	color: var(--italic-color) !important;
+}
+
+/* --- ЖИРНЫЙ КУРСИВ (***текст***) --- */
+strong em,
+em strong,
+.markdown-rendered strong em,
+.markdown-rendered em strong,
+.cm-strong.cm-em,
+.cm-em.cm-strong {
+	color: var(--bold-italic-color) !important;
+	font-weight: bold !important;
+	font-style: italic !important;
+	text-shadow: 0px 0px 2px rgba(187, 154, 247, 0.4);
+}
+
+/* --- Выделение маркером (==) --- */
+mark {
+	background-color: #e0af68 !important;
+	color: #1a1b26 !important;
+	font-weight: 600;
 	border-radius: 4px;
-	padding: 2px 4px;
+	padding: 1px 4px;
 }
-body.theme-dark .cm-s-obsidian span.cm-inline-code {
-	color: #7dcfff;
-	background-color: #24283b;
+
+/* В редакторе (Live Preview) */
+.cm-s-obsidian span.cm-highlight,
+.markdown-source-view.mod-cm6 .cm-quote span.cm-highlight,
+.markdown-source-view.mod-cm6 .HyperMD-quote span.cm-highlight {
+	background-color: #e0af68 !important;
+	color: #1a1b26 !important;
+	font-weight: 600;
+	border-radius: 2px;
+	padding: 0 2px !important;
+	text-shadow: none !important;
 }
-body.theme-light .cm-s-obsidian span.cm-inline-code {
-	color: #007197;
-	background-color: #d0d5e3;
+
+/* =========================================
+   04. БЛОКИ (Цитаты, Callouts, Код)
+   ========================================= */
+
+/* --- ЦИТАТЫ (> ) --- */
+/* Режим чтения (Read Mode) */
+.markdown-rendered blockquote {
+	padding: 12px 16px;
+	border-radius: 4px;
+	margin: 1em 0;
+	background-color: color-mix(in srgb, var(--blockquote-border-color) 20%, transparent) !important;
+	color: var(--text-muted);
+	border-left: none !important;
 }
+
+/* Режим редактирования (Live Preview) */
+/* 1. Убираем полоску и задаем фон всему блоку */
+.markdown-source-view.mod-cm6 .HyperMD-quote {
+	background-color: color-mix(in srgb, var(--blockquote-border-color) 20%, transparent) !important;
+	border-left: none !important;
+	border-radius: 4px;
+	padding-top: 4px !important;
+	padding-bottom: 4px !important;
+}
+
+/* 2. Убираем полоску и стандартные отступы у каждой строки цитаты */
+/* ВАЖНО: Мы убрали !important у цвета, чтобы выделение == могло менять его */
+.markdown-source-view.mod-cm6 .cm-quote {
+	border-left: none !important;
+	color: var(--text-muted);
+}
+
+/* 3. Задаем отступ для текста внутри строки */
+.markdown-source-view.mod-cm6 .cm-line.cm-quote {
+	padding-left: 12px !important;
+	padding-right: 12px !important;
+}
+
+/* =========================================
+   04. БЛОКИ (Цитаты, Callouts, Код)
+   ========================================= */
+
+/* --- ЦИТАТЫ (> ) --- */
+/* Режим чтения (Read Mode) */
+.markdown-rendered blockquote {
+	padding: 12px 16px;
+	border-radius: 4px;
+	margin: 1em 0;
+	background-color: color-mix(in srgb, var(--blockquote-border-color) 20%, transparent) !important;
+	color: var(--text-muted);
+	border-left: none !important;
+}
+
+/* Режим редактирования (Live Preview) */
+/* 1. Убираем полоску и задаем фон всему блоку */
+.markdown-source-view.mod-cm6 .HyperMD-quote {
+	background-color: color-mix(in srgb, var(--blockquote-border-color) 20%, transparent) !important;
+	border-left: none !important;
+	border-radius: 4px;
+	padding-top: 4px !important;
+	padding-bottom: 4px !important;
+}
+
+/* 2. Убираем полоску и стандартные отступы у каждой строки цитаты */
+.markdown-source-view.mod-cm6 .cm-quote {
+	border-left: none !important;
+	color: var(--text-muted) !important;
+}
+
+/* 3. Задаем отступ для текста внутри строки, чтобы он не прилипал к краю */
+.markdown-source-view.mod-cm6 .cm-line.cm-quote {
+	padding-left: 12px !important;
+	padding-right: 12px !important;
+}
+
+/* Фикс для выделения (==) в редакторе, чтобы не было рамок */
+.cm-s-obsidian span.cm-highlight {
+	padding: 0 2px !important;
+	border-radius: 2px;
+}
+
+/* --- CALLOUTS (Плашки) --- */
+/* Базовый фолбэк для кастомных тегов */
+.callout {
+	--callout-color: 122, 162, 247; 
+	box-shadow: none !important;
+	border-radius: 4px !important;
+	border: none !important;
+	background-color: rgba(var(--callout-color), 0.9) !important; 
+}
+
+/* Убираем полоску у Callouts в режиме редактирования */
+.cm-s-obsidian .cm-callout,
+.cm-s-obsidian .callout {
+	border-left: none !important;
+}
+
+/* Явные цвета для стандартных тегов */
+.callout[data-callout="note"],
+.callout[data-callout="info"],
+.callout[data-callout="todo"] { --callout-color: 122, 162, 247; } /* Синий */
+
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] { --callout-color: 158, 206, 106; } /* Зеленый */
+
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"] { --callout-color: 224, 175, 104; } /* Желтый */
+
+.callout[data-callout="danger"],
+.callout[data-callout="error"],
+.callout[data-callout="bug"],
+.callout[data-callout="failure"],
+.callout[data-callout="fail"],
+.callout[data-callout="missing"] { --callout-color: 247, 118, 142; } /* Красный */
+
+.callout[data-callout="quote"],
+.callout[data-callout="cite"],
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"],
+.callout[data-callout="tldr"] { --callout-color: 187, 154, 247; } /* Фиолетовый */
+
+/* Контрастный текст и иконки внутри коллаутов */
+.callout, 
+.callout-title, 
+.callout-content, 
+.callout-content a {
+	color: var(--text-on-accent) !important;
+}
+.callout-title { font-weight: 700; font-size: 1.05em; }
+.callout-icon svg { stroke: var(--text-on-accent) !important; }
+
+/* --- БЛОКИ КОДА (```) --- */
+/* Режим чтения */
+.markdown-rendered pre {
+	background-color: var(--code-background) !important;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	padding: 12px 16px;
+	margin: 1em 0;
+	box-shadow: none !important;
+}
+
+/* Режим редактирования (Live Preview) */
+.cm-s-obsidian .HyperMD-codeblock {
+	background-color: var(--code-background) !important;
+	font-family: var(--font-monospace);
+}
+.cm-s-obsidian .cm-block-code {
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	padding: 4px 0;
+}
+.cm-s-obsidian .HyperMD-codeblock-begin { border-top-left-radius: 4px; border-top-right-radius: 4px; border-top: 1px solid var(--background-modifier-border); }
+.cm-s-obsidian .HyperMD-codeblock-end { border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; border-bottom: 1px solid var(--background-modifier-border); }
+
+/* =========================================
+   05. ДОПОЛНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ
+   ========================================= */
 
 /* Иконки PDF */
 .nav-file-title[data-path$=".pdf"] .nav-file-tag {
 	font-weight: bold;
+	border-radius: 2px;
 }
 body.theme-dark .nav-file-title[data-path$=".pdf"] .nav-file-tag {
 	background-color: #f7768e;
