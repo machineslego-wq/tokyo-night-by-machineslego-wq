@@ -344,6 +344,36 @@ mark {
 .cm-s-obsidian .HyperMD-codeblock-end { border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; border-bottom: 1px solid var(--background-modifier-border); }
 
 /* =========================================
+   ФИКС ЖИРНОГО И КУРСИВА В CALLOUTS
+   ========================================= */
+
+/* 1. Жирный текст внутри Callout */
+.callout strong, 
+.callout .cm-strong {
+	color: inherit !important; /* Берем цвет текста от Callout (темный или светлый) */
+	font-weight: 900 !important; /* Делаем максимально жирным, чтобы отличался */
+}
+
+/* 2. Курсив внутри Callout */
+.callout em, 
+.callout .cm-em {
+	color: inherit !important;
+	font-weight: bold !important; /* Добавляем жирность, как ты и хотел для курсива */
+	text-decoration: underline !important; /* Подчеркиваем для 100% читаемости */
+}
+
+/* 3. Жирный курсив внутри Callout */
+.callout strong em, 
+.callout em strong,
+.callout .cm-strong.cm-em,
+.callout .cm-em.cm-strong {
+	color: inherit !important;
+	font-weight: 900 !important;
+	text-decoration: underline !important;
+	text-shadow: none !important; /* Убираем свечение, оно тут лишнее */
+}
+
+/* =========================================
    05. ДОПОЛНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ
    ========================================= */
 

@@ -8,8 +8,6 @@
 
 ![Скриншот 1](screenshot1.png)
 ![Скриншот 2](screenshot2.png)
-![Скриншот 3](screenshot3.png)
-![Скриншот 4](screenshot4.png)
 
 ## ✨ Особенности
 
