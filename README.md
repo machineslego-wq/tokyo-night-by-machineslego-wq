@@ -6,8 +6,8 @@ A strict, flat, and vibrant theme for Obsidian inspired by the **Tokyo Night** c
 
 This theme is a logical continuation of my desktop environment setup. If you want your notes to look exactly like your terminal, window manager, and panel, this theme is for you.
 
-![Screenshot 1](screenshot1.png)
-![Screenshot 2](screenshot2.png)
+![Screenshot 1](screenshots/screenshot1.png)
+![Screenshot 2](screenshots/screenshot2.png)
 
 ## ✨ Features
 
