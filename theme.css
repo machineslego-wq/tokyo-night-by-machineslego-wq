@@ -499,3 +499,27 @@ img {
 .callout mark {
     text-shadow: none !important;
 }
+
+/* =========================================
+   ФИКС СТАТУС-БАРА И НИЖНЕЙ ЗОНЫ ДЛЯ MOBILE
+   ========================================= */
+
+body.is-mobile .app-container,
+body.is-mobile .modal-container,
+body.is-mobile .workspace {
+    /* Убираем возможные отступы снизу, из-за которых контент может съезжать */
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+/* Жестко опускаем контент вниз, чтобы он не залезал под часы и батарею */
+body.is-mobile .modal-header,
+body.is-mobile .view-header,
+body.is-mobile .app-container {
+    padding-top: 0px !important; /* Подбери это значение (от 25 до 40px), пока не станет идеально */
+}
+
+/* Для самого окна настроек, чтобы шапка не прилипала */
+body.is-mobile .modal {
+    padding-top: 15px !important;
+}
