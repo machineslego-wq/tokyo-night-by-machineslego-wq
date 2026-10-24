@@ -435,3 +435,67 @@ body.theme-light .nav-file-title[data-path$=".pdf"] .nav-file-tag {
 img {
 	border-radius: 4px;
 }
+
+/* =========================================
+   ФИКС ССЫЛОК ВНУТРИ CALLOUTS
+   ========================================= */
+
+/* Режим чтения (Reading Mode) */
+.callout a.internal-link,
+.callout a.external-link,
+.callout a.is-unresolved {
+    color: inherit !important; /* Берем цвет текста Callout (черный/белый) */
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+    text-underline-offset: 3px;
+    font-weight: bold; /* Делаем жирным, чтобы отличать от обычного текста */
+}
+
+/* Режим редактирования (Live Preview) */
+.cm-s-obsidian .callout span.cm-link,
+.cm-s-obsidian .callout span.cm-url,
+.cm-s-obsidian .callout a {
+    color: inherit !important;
+    text-decoration: underline !important;
+    font-weight: bold;
+}
+
+/* Исключение для неразрешенных ссылок (на несуществующие заметки) */
+.callout a.is-unresolved {
+    opacity: 0.7; /* Делаем их чуть бледнее, но не меняем цвет */
+}
+
+/* =========================================
+   ФИКС ВЫДЕЛЕНИЙ (==) И КОДА В CALLOUTS
+   ========================================= */
+
+/* 
+   Используем полупрозрачный белый цвет для фона. 
+   Он ляжет поверх любого цвета Callout (синего, желтого, красного),
+   создав светлое пятно, на котором темный текст будет идеально читаться.
+*/
+
+.callout mark,
+.callout .cm-highlight {
+    background-color: rgba(255, 255, 255, 0.4) !important; /* Полупрозрачный белый */
+    color: #1a1b26 !important; /* Темный текст */
+    font-weight: bold !important; /* Жирный шрифт */
+    border-radius: 4px;
+    padding: 1px 4px;
+}
+
+/* То же самое для инлайн-кода (например, `command`) */
+.callout code,
+.callout .cm-inline-code {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    color: #1a1b26 !important;
+    font-weight: bold !important;
+    border-radius: 4px;
+    padding: 1px 4px;
+    font-family: var(--font-monospace);
+}
+
+/* Убираем возможную тень у выделения, чтобы не было грязи */
+.callout mark {
+    text-shadow: none !important;
+}
