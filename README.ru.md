@@ -1,4 +1,4 @@
-# Tokyo Night Flat Theme для Obsidian
+# tokyo-night-by-machineslego-wq Theme для Obsidian
 
 [English](./README.md) | **Русский**
 
@@ -30,19 +30,19 @@
    cd /путь/к/вашему/хранилищу/.obsidian/themes/
    ```
    *Если папки `themes` нет, создайте её: `mkdir -p .obsidian/themes/`*
-3. Создайте папку для темы (например, `Tokyo Night Flat`) и скопируйте туда файлы:
+3. Создайте папку для темы (например, `tokyo-night-by-machineslego-wq`) и скопируйте туда файлы:
    ```bash
-   mkdir "Tokyo Night Flat"
-   cp ~/Downloads/theme.css ~/Downloads/manifest.json "Tokyo Night Flat/"
+   mkdir "tokyo-night-by-machineslego-wq"
+   cp ~/Downloads/theme.css ~/Downloads/manifest.json "tokyo-night-by-machineslego-wq/"
    ```
-4. Перезапустите Obsidian, зайдите в **Настройки → Внешний вид → Темы** и выберите **Tokyo Night Flat**.
+4. Перезапустите Obsidian, зайдите в **Настройки → Внешний вид → Темы** и выберите **tokyo-night-by-machineslego-wq**.
 
 **Windows:**
 1. Скачайте файлы `theme.css` и `manifest.json`.
 2. Откройте проводник и перейдите в папку вашего хранилища.
 3. Зайдите в папку `.obsidian`, затем в `themes`. (Если папки `themes` нет, создайте её).
-4. Создайте новую папку с названием `Tokyo Night Flat` и положите в неё оба файла.
-5. Перезапустите Obsidian, зайдите в **Настройки → Внешний вид → Темы** и выберите **Tokyo Night Flat**.
+4. Создайте новую папку с названием `tokyo-night-by-machineslego-wq` и положите в неё оба файла.
+5. Перезапустите Obsidian, зайдите в **Настройки → Внешний вид → Темы** и выберите **tokyo-night-by-machineslego-wq**.
 
 ### Способ 2: Через BRAT (Автообновление с GitHub)
 
@@ -54,21 +54,21 @@
    ```
    https://github.com/machineslego-wq/tokyo-night-by-machineslego-wq
    ```
-4. Тема установится. Зайдите в **Настройки → Внешний вид → Темы** и выберите **Tokyo Night Flat**.
+4. Тема установится. Зайдите в **Настройки → Внешний вид → Темы** и выберите **tokyo-night-by-machineslego-wq**.
 
 ### Способ 3: Из релизов GitHub (ZIP)
 
 Если вы предпочитаете скачивать готовый архив:
 
 1. Перейдите на страницу [Releases](https://github.com/machineslego-wq/tokyo-night-by-machineslego-wq/releases).
-2. Скачайте последний `.zip` файл (например, `tokyo-night-flat-v1.0.1.zip`).
+2. Скачайте последний `.zip` файл (например, `tokyo-night-by-machineslego-wq-X.X.X.zip` — точное имя смотрите в последнем релизе).
 3. Распакуйте архив в папку `.obsidian/themes/` вашего хранилища.
-   *Убедитесь, что итоговый путь выглядит так: `<хранилище>/.obsidian/themes/Tokyo Night Flat/`*
-4. Перезапустите Obsidian, зайдите в **Настройки → Внешний вид → Темы** и выберите **Tokyo Night Flat**.
+   *Убедитесь, что итоговый путь выглядит так: `<хранилище>/.obsidian/themes/tokyo-night-by-machineslego-wq/`*
+4. Перезапустите Obsidian, зайдите в **Настройки → Внешний вид → Темы** и выберите **tokyo-night-by-machineslego-wq**.
 
 ## 🔄 Обновление
 
-- **Ручная установка:** Скачайте последние `theme.css` и `manifest.json` из репозитория и замените существующие файлы в папке `.obsidian/themes/Tokyo Night Flat/`. Перезапустите Obsidian или используйте палитру команд (`Ctrl+P`) → **Reload app without saving**.
+- **Ручная установка:** Скачайте последние `theme.css` и `manifest.json` из репозитория и замените существующие файлы в папке `.obsidian/themes/tokyo-night-by-machineslego-wq/`. Перезапустите Obsidian или используйте палитру команд (`Ctrl+P`) → **Reload app without saving**.
 - **BRAT:** BRAT проверяет обновления автоматически. Вы также можете запустить проверку вручную в **Настройки → BRAT**.
 - **Релизы GitHub:** Скачайте новый `.zip` со страницы релизов и распакуйте его поверх существующей папки, заменив старые файлы.
 
