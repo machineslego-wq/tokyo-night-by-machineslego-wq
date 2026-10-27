@@ -16,6 +16,7 @@ This theme is the logical extension of my desktop environment setup. If you want
 - **Smart Callouts:** Fully styled and adapted for both desktop and mobile. Custom tags supported.
 - **Edit = Read:** Live Preview mode is tuned to look almost indistinguishable from Reading mode.
 - **Two modes:** Full support for both dark and light (Day) Obsidian themes.
+- **Style Settings support:** Every color in the theme can be changed via GUI — no CSS editing needed. Separate pickers for dark and light modes.
 
 ## 📦 Installation
 
@@ -65,6 +66,36 @@ If you prefer to download a ready-made archive:
 3. Extract the archive into your vault's `.obsidian/themes/` folder.
    *Make sure the final path looks like: `<vault>/.obsidian/themes/tokyo-night-by-machineslego-wq/`*
 4. Restart Obsidian, go to **Settings → Appearance → Themes** and select **tokyo-night-by-machineslego-wq**.
+
+## 🎨 Customization
+
+### Via Style Settings (Recommended)
+
+The theme ships with full **Style Settings** support. Every color can be changed through a GUI — no CSS editing required.
+
+1. Install and enable the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)** plugin under **Settings → Community plugins**.
+2. Open **Settings → Style Settings → Tokyo Night Theme**.
+3. Adjust any color — **separate pickers for dark and light themes**.
+
+Available settings:
+
+- **Backgrounds** — primary, alternate, secondary, borders
+- **Text** — normal, muted, faint, on-accent
+- **Accents** — accent color, accent hover (also drives caret + interactive elements)
+- **Headings** — H1 through H6
+- **Inline formatting** — bold, italic, bold+italic
+- **Highlights** — background and text color of `==highlighted==` text
+- **Blockquotes** — accent color for border and translucent tint
+- **Code blocks** — 12 colors (comment, function, keyword, operator, property, punctuation, string, tag, value, important, normal, background)
+- **Tags** — background and text color of `#tags`
+- **Callouts** — 5 semantic colors (blue / green / yellow / red / purple)
+- **PDF tags** — background and text color of PDF file labels
+
+Changes are applied immediately. All default values match the original Tokyo Night palette.
+
+### Manual CSS
+
+If you don't want to use Style Settings, you can still edit `theme.css` directly — the file uses CSS variables at the top (`body.theme-dark` / `body.theme-light`), so any override is a one-line change.
 
 ## 🔄 Updating
 
