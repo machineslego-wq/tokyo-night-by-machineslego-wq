@@ -167,10 +167,10 @@ settings:
       default-dark: '#f7768e'
 
     - id: hd-formatting
-      title: Inline Formatting
+      title: Inline Formatting (Bold / Italic)
       type: heading
       level: 2
-      collapsed: true
+      collapsed: false
 
     - id: bold-color
       title: Bold Text
@@ -197,10 +197,10 @@ settings:
       default-dark: '#bb9af7'
 
     - id: hd-highlights
-      title: Highlights & Marked Text
+      title: Highlights & Marked Text (==)
       type: heading
       level: 2
-      collapsed: true
+      collapsed: false
 
     - id: text-highlight-bg
       title: Highlight Background
@@ -539,11 +539,6 @@ body {
 	--table-border-width: 1px;
 	--table-header-font-weight: bold;
 	--hr-thickness: 2px;
-
-	/* Пользовательские переменные (для Style Settings) */
-	--mark-text-color: #1a1b26;
-	--user-tag-bg: #ff9e64;
-	--user-tag-text: #1a1b26;
 }
 
 /* Убираем тени у меню, модалок и всплывающих окон */
@@ -617,7 +612,6 @@ mark {
    ========================================= */
 
 /* --- ЦИТАТЫ (> ) --- */
-/* Режим чтения (Read Mode) */
 .markdown-rendered blockquote {
 	padding: 12px 16px;
 	border-radius: 4px;
@@ -627,7 +621,6 @@ mark {
 	border-left: none !important;
 }
 
-/* Режим редактирования (Live Preview) */
 .markdown-source-view.mod-cm6 .HyperMD-quote {
 	background-color: color-mix(in srgb, var(--blockquote-border-color) 20%, transparent) !important;
 	border-left: none !important;
@@ -665,7 +658,6 @@ mark {
 	border-left: none !important;
 }
 
-/* Явные цвета для стандартных тегов */
 .callout[data-callout="note"],
 .callout[data-callout="info"],
 .callout[data-callout="todo"] { --callout-color: var(--user-callout-blue, 122, 162, 247); }
@@ -771,7 +763,6 @@ a.external-link:hover,
     border-radius: 2px;
 }
 
-/* Неразрешенные ссылки */
 a.internal-link.is-unresolved,
 .cm-s-obsidian span.cm-link.is-unresolved {
     color: var(--text-faint) !important;
@@ -790,7 +781,6 @@ body {
     --tag-radius: 15px !important;
 }
 
-/* --- Режим чтения (Read Mode) --- */
 a.tag {
     color: var(--user-tag-text, #1a1b26) !important;
     background-color: var(--user-tag-bg, #ff9e64) !important;
@@ -803,7 +793,6 @@ a.tag {
     line-height: 1.2;
 }
 
-/* --- Режим редактирования (Live Preview) --- */
 .cm-s-obsidian span.cm-hashtag {
     color: var(--user-tag-text, #1a1b26) !important;
     background-color: var(--user-tag-bg, #ff9e64) !important;
@@ -811,26 +800,22 @@ a.tag {
     text-decoration: none !important;
 }
 
-/* Начало тега # (левая часть таблетки) */
 .cm-s-obsidian span.cm-hashtag-begin {
     padding: 4px 0 4px 12px !important;
     border-radius: 15px 0 0 15px !important;
     margin-left: 6px !important;
 }
 
-/* Конец тега (правая часть таблетки) */
 .cm-s-obsidian span.cm-hashtag-end {
     padding: 4px 12px 4px 0 !important;
     border-radius: 0 15px 15px 0 !important;
     margin-right: 6px !important;
 }
 
-/* Середина тега (основной текст) */
 .cm-s-obsidian span.cm-hashtag-middle {
     padding: 4px 0 !important;
 }
 
-/* --- Фикс для мобилок --- */
 body.is-mobile .tag,
 body.is-mobile .cm-hashtag,
 body.is-mobile .cm-hashtag-begin,
@@ -868,7 +853,6 @@ img {
    ФИКС ССЫЛОК ВНУТРИ CALLOUTS
    ========================================= */
 
-/* Режим чтения (Reading Mode) */
 .callout a.internal-link,
 .callout a.external-link,
 .callout a.is-unresolved {
@@ -879,7 +863,6 @@ img {
     font-weight: bold;
 }
 
-/* Режим редактирования (Live Preview) */
 .cm-s-obsidian .callout span.cm-link,
 .cm-s-obsidian .callout span.cm-url,
 .cm-s-obsidian .callout a {
@@ -888,7 +871,6 @@ img {
     font-weight: bold;
 }
 
-/* Исключение для неразрешенных ссылок */
 .callout a.is-unresolved {
     opacity: 0.7;
 }
