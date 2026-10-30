@@ -1,0 +1,924 @@
+/* @settings
+
+name: Tokyo Night Theme
+id: tokyo-night-theme
+settings:
+    - id: tokyo-info
+      title: Tokyo Night Theme — Color Settings
+      description: "Настройка цветов темы. Все значения по умолчанию совпадают с оригинальной палитрой. Для светлой и тёмной темы — отдельные пикеры."
+      type: info-text
+      markdown: true
+
+    - id: hd-backgrounds
+      title: Backgrounds
+      type: heading
+      level: 2
+      collapsed: false
+
+    - id: background-primary
+      title: Primary Background
+      description: Main editor background
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#e1e2e7'
+      default-dark: '#1a1b26'
+
+    - id: background-primary-alt
+      title: Primary Background (Alternate)
+      description: Code blocks, alternate surfaces
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#d0d5e3'
+      default-dark: '#1f2335'
+
+    - id: background-secondary
+      title: Secondary Background
+      description: Sidebars, file explorer
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#e9e9ed'
+      default-dark: '#16161e'
+
+    - id: background-modifier-border
+      title: Borders
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#c4c8da'
+      default-dark: '#24283b'
+
+    - id: hd-text
+      title: Text
+      type: heading
+      level: 2
+      collapsed: false
+
+    - id: text-normal
+      title: Normal Text
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#3760bf'
+      default-dark: '#c0caf5'
+
+    - id: text-muted
+      title: Muted Text
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#6172b0'
+      default-dark: '#a9b1d6'
+
+    - id: text-faint
+      title: Faint Text
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#a8aecb'
+      default-dark: '#565f89'
+
+    - id: text-on-accent
+      title: Text on Accent
+      description: Text over callouts / accent buttons
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#e1e2e7'
+      default-dark: '#1a1b26'
+
+    - id: hd-accents
+      title: Accent Colors
+      type: heading
+      level: 2
+      collapsed: false
+
+    - id: text-accent
+      title: Accent Color
+      description: Links, interactive elements (also drives caret + interactive-accent)
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#2e7de9'
+      default-dark: '#7aa2f7'
+
+    - id: text-accent-hover
+      title: Accent Hover
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#1b52c4'
+      default-dark: '#2ac3de'
+
+    - id: hd-headings
+      title: Headings (H1 – H6)
+      type: heading
+      level: 2
+      collapsed: true
+
+    - id: h1-color
+      title: H1 Color
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#2e7de9'
+      default-dark: '#7aa2f7'
+
+    - id: h2-color
+      title: H2 Color
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#9854f1'
+      default-dark: '#bb9af7'
+
+    - id: h3-color
+      title: H3 Color
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#007197'
+      default-dark: '#7dcfff'
+
+    - id: h4-color
+      title: H4 Color
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#587539'
+      default-dark: '#9ece6a'
+
+    - id: h5-color
+      title: H5 Color
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#8c6c3e'
+      default-dark: '#e0af68'
+
+    - id: h6-color
+      title: H6 Color
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#f52a65'
+      default-dark: '#f7768e'
+
+    - id: hd-formatting
+      title: Inline Formatting (Bold / Italic)
+      type: heading
+      level: 2
+      collapsed: false
+
+    - id: bold-color
+      title: Bold Text
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#9a6524'
+      default-dark: '#e0af68'
+
+    - id: italic-color
+      title: Italic Text
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#007197'
+      default-dark: '#2ac3de'
+
+    - id: bold-italic-color
+      title: Bold + Italic Text
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#9854f1'
+      default-dark: '#bb9af7'
+
+    - id: hd-highlights
+      title: Highlights & Marked Text (==)
+      type: heading
+      level: 2
+      collapsed: false
+
+    - id: text-highlight-bg
+      title: Highlight Background
+      description: Background of ==highlighted== text
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#d6a65c'
+      default-dark: '#c7a158'
+
+    - id: mark-text-color
+      title: Highlight Text Color
+      description: Text color on highlighted text
+      type: variable-color
+      format: hex
+      opacity: false
+      default: '#1a1b26'
+
+    - id: hd-blockquotes
+      title: Blockquotes
+      type: heading
+      level: 2
+      collapsed: true
+
+    - id: blockquote-border-color
+      title: Blockquote Accent Color
+      description: Used for quote border and translucent tint
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#9854f1'
+      default-dark: '#bb9af7'
+
+    - id: hd-code
+      title: Code Blocks
+      type: heading
+      level: 2
+      collapsed: true
+
+    - id: code-background
+      title: Code Background
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#d0d5e3'
+      default-dark: '#1f2335'
+
+    - id: code-normal
+      title: Code Text
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#3760bf'
+      default-dark: '#c0caf5'
+
+    - id: code-comment
+      title: Code Comment
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#848cb5'
+      default-dark: '#565f89'
+
+    - id: code-function
+      title: Code Function
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#2e7de9'
+      default-dark: '#7aa2f7'
+
+    - id: code-keyword
+      title: Code Keyword
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#9854f1'
+      default-dark: '#bb9af7'
+
+    - id: code-operator
+      title: Code Operator
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#007197'
+      default-dark: '#89ddff'
+
+    - id: code-property
+      title: Code Property
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#007197'
+      default-dark: '#73daca'
+
+    - id: code-punctuation
+      title: Code Punctuation
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#6172b0'
+      default-dark: '#a9b1d6'
+
+    - id: code-string
+      title: Code String
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#587539'
+      default-dark: '#9ece6a'
+
+    - id: code-tag
+      title: Code Tag / HTML
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#f52a65'
+      default-dark: '#f7768e'
+
+    - id: code-value
+      title: Code Value / Number
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#8c6c3e'
+      default-dark: '#e0af68'
+
+    - id: code-important
+      title: Code Important
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#b15c00'
+      default-dark: '#ff9e64'
+
+    - id: hd-tags
+      title: Tags
+      type: heading
+      level: 2
+      collapsed: true
+
+    - id: user-tag-bg
+      title: Tag Background
+      type: variable-color
+      format: hex
+      opacity: false
+      default: '#d49658'
+
+    - id: user-tag-text
+      title: Tag Text Color
+      type: variable-color
+      format: hex
+      opacity: false
+      default: '#1a1b26'
+
+    - id: hd-callouts
+      title: Callouts
+      type: heading
+      level: 2
+      collapsed: true
+
+    - id: user-callout-blue
+      title: Blue Callouts (note, info, todo)
+      type: variable-color
+      format: rgb-values
+      opacity: false
+      default: '#6989d4'
+
+    - id: user-callout-green
+      title: Green Callouts (tip, success, done)
+      type: variable-color
+      format: rgb-values
+      opacity: false
+      default: '#8ab35c'
+
+    - id: user-callout-yellow
+      title: Yellow Callouts (warning, caution)
+      type: variable-color
+      format: rgb-values
+      opacity: false
+      default: '#c49a5e'
+
+    - id: user-callout-red
+      title: Red Callouts (danger, error, bug)
+      type: variable-color
+      format: rgb-values
+      opacity: false
+      default: '#d4677d'
+
+    - id: user-callout-purple
+      title: Purple Callouts (quote, cite, abstract)
+      type: variable-color
+      format: rgb-values
+      opacity: false
+      default: '#a583d8'
+
+    - id: hd-pdf
+      title: PDF File Tags
+      type: heading
+      level: 2
+      collapsed: true
+
+    - id: user-pdf-tag-bg
+      title: PDF Tag Background
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#f52a65'
+      default-dark: '#f7768e'
+
+    - id: user-pdf-tag-text
+      title: PDF Tag Text
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#e1e2e7'
+      default-dark: '#1a1b26'
+
+*/
+
+/* =========================================
+   TOKYO NIGHT FLAT THEME ДЛЯ OBSIDIAN
+   (Строгий дизайн, яркие акценты, Edit = Read)
+   ========================================= */
+
+/* =========================================
+   01. ПЕРЕМЕННЫЕ ТЕМЫ
+   ========================================= */
+
+/* --- ТЕМНАЯ ТЕМА (Tokyo Night) --- */
+body.theme-dark {
+	--background-primary: #1a1b26;
+	--background-primary-alt: #1f2335;
+	--background-secondary: #16161e;
+	--background-modifier-border: #24283b;
+
+	--text-normal: #c0caf5;
+	--text-muted: #a9b1d6;
+	--text-faint: #565f89;
+	
+	--text-accent: #7aa2f7;
+	--text-accent-hover: #2ac3de;
+	--interactive-accent: var(--text-accent);
+	--interactive-accent-hover: var(--text-accent-hover);
+	--text-on-accent: #1a1b26;
+
+	--h1-color: #7aa2f7;
+	--h2-color: #bb9af7;
+	--h3-color: #7dcfff;
+	--h4-color: #9ece6a;
+	--h5-color: #e0af68;
+	--h6-color: #f7768e;
+
+	--bold-color: #e0af68;
+	--italic-color: #2ac3de;
+	--bold-italic-color: #bb9af7;
+
+	--caret-color: var(--text-accent);
+	--text-selection: rgba(122, 162, 247, 0.18);
+	--text-highlight-bg: #c7a158;
+	
+	--blockquote-background-color: transparent;
+	--blockquote-border-color: #bb9af7;
+
+	--code-background: #1f2335;
+	--code-normal: #c0caf5;
+	--code-comment: #565f89;
+	--code-function: #7aa2f7;
+	--code-keyword: #bb9af7;
+	--code-operator: #89ddff;
+	--code-property: #73daca;
+	--code-punctuation: #a9b1d6;
+	--code-string: #9ece6a;
+	--code-tag: #f7768e;
+	--code-value: #e0af68;
+	--code-important: #ff9e64;
+}
+
+/* --- СВЕТЛАЯ ТЕМА (Tokyo Night Day) --- */
+body.theme-light {
+	--background-primary: #e1e2e7;
+	--background-primary-alt: #d0d5e3;
+	--background-secondary: #e9e9ed;
+	--background-modifier-border: #c4c8da;
+
+	--text-normal: #3760bf;
+	--text-muted: #6172b0;
+	--text-faint: #a8aecb;
+	
+	--text-accent: #2e7de9;
+	--text-accent-hover: #1b52c4;
+	--interactive-accent: var(--text-accent);
+	--interactive-accent-hover: var(--text-accent-hover);
+	--text-on-accent: #e1e2e7;
+
+	--h1-color: #2e7de9;
+	--h2-color: #9854f1;
+	--h3-color: #007197;
+	--h4-color: #587539;
+	--h5-color: #8c6c3e;
+	--h6-color: #f52a65;
+
+	--bold-color: #9a6524;
+	--italic-color: #007197;
+	--bold-italic-color: #9854f1;
+
+	--caret-color: var(--text-accent);
+	--text-selection: rgba(46, 125, 233, 0.12);
+	--text-highlight-bg: #d6a65c;
+	
+	--blockquote-background-color: transparent;
+	--blockquote-border-color: #9854f1;
+
+	--code-background: #d0d5e3;
+	--code-normal: #3760bf;
+	--code-comment: #848cb5;
+	--code-function: #2e7de9;
+	--code-keyword: #9854f1;
+	--code-operator: #007197;
+	--code-property: #007197;
+	--code-punctuation: #6172b0;
+	--code-string: #587539;
+	--code-tag: #f52a65;
+	--code-value: #8c6c3e;
+	--code-important: #b15c00;
+}
+
+/* =========================================
+   02. ГЛОБАЛЬНЫЕ НАСТРОЙКИ И UI (Плоский дизайн)
+   ========================================= */
+body {
+	--bold-modifier: var(--font-semibold);
+	--blockquote-font-style: italic;
+	--blockquote-border-thickness: 4px;
+	--table-background: transparent;
+	--table-border-width: 1px;
+	--table-header-font-weight: bold;
+	--hr-thickness: 2px;
+}
+
+/* Убираем тени у меню, модалок и всплывающих окон */
+.menu, .modal, .prompt, .suggestion-container, .popover {
+	box-shadow: none !important;
+	border: 1px solid var(--background-modifier-border) !important;
+	border-radius: 4px !important;
+}
+
+/* Убираем полоски у активных вкладок */
+.workspace-tab-header.is-active::before,
+.workspace-tab-header.is-active::after {
+	display: none;
+}
+
+/* =========================================
+   03. ТИПОГРАФИЯ И ИНЛАЙН-ЭЛЕМЕНТЫ
+   ========================================= */
+
+/* --- ЖИРНЫЙ (Bold) --- */
+strong,
+.cm-strong,
+.markdown-rendered strong {
+	color: var(--bold-color) !important;
+}
+
+/* --- КУРСИВ (Italic) --- */
+em, i,
+.cm-em,
+.markdown-rendered em {
+	font-weight: bolder;
+	color: var(--italic-color) !important;
+}
+
+/* --- ЖИРНЫЙ КУРСИВ (***текст***) --- */
+strong em,
+em strong,
+.markdown-rendered strong em,
+.markdown-rendered em strong,
+.cm-strong.cm-em,
+.cm-em.cm-strong {
+	color: var(--bold-italic-color) !important;
+	font-weight: bold !important;
+	font-style: italic !important;
+	text-shadow: 0px 0px 2px rgba(187, 154, 247, 0.4);
+}
+
+/* --- Выделение маркером (==) --- */
+mark {
+	background-color: var(--text-highlight-bg, #c7a158) !important;
+	color: var(--mark-text-color, #1a1b26) !important;
+	font-weight: 600;
+	border-radius: 4px;
+	padding: 1px 4px;
+}
+
+/* В редакторе (Live Preview) */
+.cm-s-obsidian span.cm-highlight,
+.markdown-source-view.mod-cm6 .cm-quote span.cm-highlight,
+.markdown-source-view.mod-cm6 .HyperMD-quote span.cm-highlight {
+	background-color: var(--text-highlight-bg, #c7a158) !important;
+	color: var(--mark-text-color, #1a1b26) !important;
+	font-weight: 600;
+	border-radius: 2px;
+	padding: 0 2px !important;
+	text-shadow: none !important;
+}
+
+/* =========================================
+   04. БЛОКИ (Цитаты, Callouts, Код)
+   ========================================= */
+
+/* --- ЦИТАТЫ (> ) --- */
+.markdown-rendered blockquote {
+	padding: 12px 16px;
+	border-radius: 4px;
+	margin: 1em 0;
+	background-color: color-mix(in srgb, var(--blockquote-border-color) 20%, transparent) !important;
+	color: var(--text-muted);
+	border-left: none !important;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-quote {
+	background-color: color-mix(in srgb, var(--blockquote-border-color) 20%, transparent) !important;
+	border-left: none !important;
+	border-radius: 4px;
+	padding-top: 4px !important;
+	padding-bottom: 4px !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-quote {
+	border-left: none !important;
+	color: var(--text-muted);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.cm-quote {
+	padding-left: 12px !important;
+	padding-right: 12px !important;
+}
+
+.cm-s-obsidian span.cm-highlight {
+	padding: 0 2px !important;
+	border-radius: 2px;
+}
+
+/* --- CALLOUTS (Плашки) --- */
+.callout {
+	--callout-color: var(--user-callout-blue, 105, 137, 212);
+	box-shadow: none !important;
+	border-radius: 4px !important;
+	border: none !important;
+	background-color: rgba(var(--callout-color), 0.9) !important; 
+}
+
+.cm-s-obsidian .cm-callout,
+.cm-s-obsidian .callout {
+	border-left: none !important;
+}
+
+.callout[data-callout="note"],
+.callout[data-callout="info"],
+.callout[data-callout="todo"] { --callout-color: var(--user-callout-blue, 105, 137, 212); }
+
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] { --callout-color: var(--user-callout-green, 138, 179, 92); }
+
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"] { --callout-color: var(--user-callout-yellow, 196, 154, 94); }
+
+.callout[data-callout="danger"],
+.callout[data-callout="error"],
+.callout[data-callout="bug"],
+.callout[data-callout="failure"],
+.callout[data-callout="fail"],
+.callout[data-callout="missing"] { --callout-color: var(--user-callout-red, 212, 103, 125); }
+
+.callout[data-callout="quote"],
+.callout[data-callout="cite"],
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"],
+.callout[data-callout="tldr"] { --callout-color: var(--user-callout-purple, 165, 131, 216); }
+
+.callout, 
+.callout-title, 
+.callout-content, 
+.callout-content a {
+	color: var(--text-on-accent) !important;
+}
+.callout-title { font-weight: 700; font-size: 1.05em; }
+.callout-icon svg { stroke: var(--text-on-accent) !important; }
+
+/* --- ФИКС ЖИРНОГО И КУРСИВА В CALLOUTS --- */
+.callout strong, 
+.callout .cm-strong {
+	color: inherit !important;
+	font-weight: 900 !important;
+}
+
+.callout em, 
+.callout .cm-em {
+	color: inherit !important;
+	font-weight: bold !important;
+	text-decoration: underline !important;
+}
+
+.callout strong em, 
+.callout em strong,
+.callout .cm-strong.cm-em,
+.callout .cm-em.cm-strong {
+	color: inherit !important;
+	font-weight: 900 !important;
+	text-decoration: underline !important;
+	text-shadow: none !important;
+}
+
+/* --- БЛОКИ КОДА (```) --- */
+.markdown-rendered pre {
+	background-color: var(--code-background) !important;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	padding: 12px 16px;
+	margin: 1em 0;
+	box-shadow: none !important;
+}
+
+.cm-s-obsidian .HyperMD-codeblock {
+	background-color: var(--code-background) !important;
+	font-family: var(--font-monospace);
+}
+.cm-s-obsidian .cm-block-code {
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	padding: 4px 0;
+}
+.cm-s-obsidian .HyperMD-codeblock-begin { border-top-left-radius: 4px; border-top-right-radius: 4px; border-top: 1px solid var(--background-modifier-border); }
+.cm-s-obsidian .HyperMD-codeblock-end { border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; border-bottom: 1px solid var(--background-modifier-border); }
+
+/* =========================================
+   05. ССЫЛКИ (Links)
+   ========================================= */
+a.internal-link,
+a.external-link,
+.cm-s-obsidian span.cm-link,
+.cm-s-obsidian span.cm-url {
+    color: var(--text-accent) !important;
+    text-decoration: underline !important;
+    text-decoration-color: color-mix(in srgb, var(--text-accent) 50%, transparent) !important;
+    text-underline-offset: 3px;
+    transition: all 0.2s ease;
+}
+
+a.internal-link:hover,
+a.external-link:hover,
+.cm-s-obsidian span.cm-link:hover {
+    color: var(--text-accent-hover) !important;
+    text-decoration-color: var(--text-accent-hover) !important;
+    background-color: color-mix(in srgb, var(--text-accent) 10%, transparent);
+    border-radius: 2px;
+}
+
+a.internal-link.is-unresolved,
+.cm-s-obsidian span.cm-link.is-unresolved {
+    color: var(--text-faint) !important;
+    text-decoration-style: dashed !important;
+}
+
+/* =========================================
+   06. ТЕГИ (Оранжевый бейдж)
+   ========================================= */
+body {
+    --tag-color: var(--user-tag-text, #1a1b26) !important;
+    --tag-background: var(--user-tag-bg, #d49658) !important;
+    --tag-color-hover: var(--user-tag-text, #1a1b26) !important;
+    --tag-background-hover: var(--user-tag-bg, #d49658) !important;
+    --tag-border-color: transparent !important;
+    --tag-radius: 15px !important;
+}
+
+a.tag {
+    color: var(--user-tag-text, #1a1b26) !important;
+    background-color: var(--user-tag-bg, #d49658) !important;
+    border-radius: 15px !important;
+    padding: 4px 12px !important;
+    margin: 0 6px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    display: inline-block;
+    line-height: 1.2;
+}
+
+.cm-s-obsidian span.cm-hashtag {
+    color: var(--user-tag-text, #1a1b26) !important;
+    background-color: var(--user-tag-bg, #d49658) !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+.cm-s-obsidian span.cm-hashtag-begin {
+    padding: 4px 0 4px 12px !important;
+    border-radius: 15px 0 0 15px !important;
+    margin-left: 6px !important;
+}
+
+.cm-s-obsidian span.cm-hashtag-end {
+    padding: 4px 12px 4px 0 !important;
+    border-radius: 0 15px 15px 0 !important;
+    margin-right: 6px !important;
+}
+
+.cm-s-obsidian span.cm-hashtag-middle {
+    padding: 4px 0 !important;
+}
+
+body.is-mobile .tag,
+body.is-mobile .cm-hashtag,
+body.is-mobile .cm-hashtag-begin,
+body.is-mobile .cm-hashtag-middle,
+body.is-mobile .cm-hashtag-end {
+    color: var(--user-tag-text, #1a1b26) !important;
+    background-color: var(--user-tag-bg, #d49658) !important;
+    border-radius: 15px !important;
+}
+
+/* =========================================
+   07. ДОПОЛНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ
+   ========================================= */
+
+/* Иконки PDF */
+.nav-file-title[data-path$=".pdf"] .nav-file-tag {
+	font-weight: bold;
+	border-radius: 2px;
+}
+body.theme-dark .nav-file-title[data-path$=".pdf"] .nav-file-tag {
+	background-color: var(--user-pdf-tag-bg, #f7768e);
+	color: var(--user-pdf-tag-text, #1a1b26);
+}
+body.theme-light .nav-file-title[data-path$=".pdf"] .nav-file-tag {
+	background-color: var(--user-pdf-tag-bg, #f52a65);
+	color: var(--user-pdf-tag-text, #e1e2e7);
+}
+
+/* Скругление картинок */
+img {
+	border-radius: 4px;
+}
+
+/* =========================================
+   ФИКС ССЫЛОК ВНУТРИ CALLOUTS
+   ========================================= */
+
+.callout a.internal-link,
+.callout a.external-link,
+.callout a.is-unresolved {
+    color: inherit !important;
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+    text-underline-offset: 3px;
+    font-weight: bold;
+}
+
+.cm-s-obsidian .callout span.cm-link,
+.cm-s-obsidian .callout span.cm-url,
+.cm-s-obsidian .callout a {
+    color: inherit !important;
+    text-decoration: underline !important;
+    font-weight: bold;
+}
+
+.callout a.is-unresolved {
+    opacity: 0.7;
+}
+
+/* =========================================
+   ФИКС ВЫДЕЛЕНИЙ (==) И КОДА В CALLOUTS
+   ========================================= */
+
+.callout mark,
+.callout .cm-highlight {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    color: #1a1b26 !important;
+    font-weight: bold !important;
+    border-radius: 4px;
+    padding: 1px 4px;
+}
+
+.callout code,
+.callout .cm-inline-code {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    color: #1a1b26 !important;
+    font-weight: bold !important;
+    border-radius: 4px;
+    padding: 1px 4px;
+    font-family: var(--font-monospace);
+}
+
+.callout mark {
+    text-shadow: none !important;
+}
+
+/* =========================================
+   ФИКС СТАТУС-БАРА И НИЖНЕЙ ЗОНЫ ДЛЯ MOBILE
+   ========================================= */
+
+body.is-mobile .app-container,
+body.is-mobile .modal-container,
+body.is-mobile .workspace {
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+body.is-mobile .modal-header,
+body.is-mobile .view-header,
+body.is-mobile .app-container {
+    padding-top: 0px !important;
+}
+
+body.is-mobile .modal {
+    padding-top: 15px !important;
+}
