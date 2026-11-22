@@ -13,10 +13,12 @@ This theme is the logical extension of my desktop environment setup. If you want
 
 - **Flat design:** No distracting shadows or unnecessary rounding. Strict, clean and minimal.
 - **Vibrant accents:** Highly readable highlight (`==`), expressive typography for bold, italic and bold-italic.
+- **Themed UI controls:** Buttons, icon buttons, search/input fields, menus, modals and popovers use the Tokyo Night surfaces instead of Obsidian's stock gray colors.
 - **Smart Callouts:** Fully styled and adapted for both desktop and mobile. Custom tags supported.
 - **Edit = Read:** Live Preview mode is tuned to look almost indistinguishable from Reading mode.
 - **Two modes:** Full support for both dark and light (Day) Obsidian themes.
-- **Style Settings support:** Every color in the theme can be changed via GUI — no CSS editing needed. Separate pickers for dark and light modes.
+- **Style Settings support:** Colors, button styles and Editing Toolbar colors can be changed via GUI — no CSS editing needed. Separate pickers for dark and light modes.
+- **Editing Toolbar ready:** The [Editing Toolbar](https://github.com/PKM-er/obsidian-editing-toolbar) plugin is styled out of the box: panel, icons, hover states and dropdown menus.
 
 ## 📦 Installation
 
@@ -93,7 +95,11 @@ Available settings:
 - **Buttons** — background, text, border, accent (CTA) colors and corner radius
 - **Editing Toolbar** — background, border, icon colors, hover tint and corner radius for the [Editing Toolbar](https://github.com/PKM-er/obsidian-editing-toolbar) plugin
 
+Search fields, inputs and search result panels follow the **Backgrounds** settings (alternate background and borders), so they stay consistent with buttons and menus.
+
 Changes are applied immediately. All default values match the original Tokyo Night palette.
+
+> **Editing Toolbar note:** the theme intentionally overrides the plugin's own *Toolbar Background* and *Toolbar Icon Color* settings so the toolbar matches the theme. Change them in **Style Settings → Tokyo Night Theme → Editing Toolbar** instead.
 
 ### Manual CSS
 
