@@ -90,6 +90,8 @@ Available settings:
 - **Tags** — background and text color of `#tags`
 - **Callouts** — 5 semantic colors (blue / green / yellow / red / purple)
 - **PDF tags** — background and text color of PDF file labels
+- **Buttons** — background, text, border, accent (CTA) colors and corner radius
+- **Editing Toolbar** — background, border, icon colors, hover tint and corner radius for the [Editing Toolbar](https://github.com/PKM-er/obsidian-editing-toolbar) plugin
 
 Changes are applied immediately. All default values match the original Tokyo Night palette.
 

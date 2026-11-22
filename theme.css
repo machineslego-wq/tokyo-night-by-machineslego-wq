@@ -419,6 +419,135 @@ settings:
       default-light: '#e1e2e7'
       default-dark: '#1a1b26'
 
+    - id: hd-buttons
+      title: Buttons
+      type: heading
+      level: 2
+      collapsed: false
+
+    - id: tn-button-bg
+      title: Button Background
+      description: Secondary buttons, dialogs and settings actions
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#d0d5e3'
+      default-dark: '#292e42'
+
+    - id: tn-button-bg-hover
+      title: Button Background (Hover)
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#c4c8da'
+      default-dark: '#3b4261'
+
+    - id: tn-button-text
+      title: Button Text
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#3760bf'
+      default-dark: '#c0caf5'
+
+    - id: tn-button-border
+      title: Button Border
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#b6bcd3'
+      default-dark: '#3b4261'
+
+    - id: tn-button-accent-bg
+      title: Accent Button Background
+      description: Primary buttons (Save, Create, etc.)
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#2e7de9'
+      default-dark: '#7aa2f7'
+
+    - id: tn-button-accent-bg-hover
+      title: Accent Button Background (Hover)
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#1b52c4'
+      default-dark: '#2ac3de'
+
+    - id: tn-button-accent-text
+      title: Accent Button Text
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#e1e2e7'
+      default-dark: '#1a1b26'
+
+    - id: tn-button-radius
+      title: Button Corner Radius
+      type: variable-number-slider
+      default: 4
+      min: 0
+      max: 20
+      step: 1
+      format: px
+
+    - id: hd-editing-toolbar
+      title: Editing Toolbar
+      description: "Стили для плагина Editing Toolbar (кнопки форматирования над редактором). Плагин должен быть установлен."
+      type: heading
+      level: 2
+      collapsed: false
+
+    - id: tn-toolbar-bg
+      title: Toolbar Background
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#d0d5e3'
+      default-dark: '#1f2335'
+
+    - id: tn-toolbar-border
+      title: Toolbar Border
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#b6bcd3'
+      default-dark: '#3b4261'
+
+    - id: tn-toolbar-icon
+      title: Toolbar Icon Color
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#6172b0'
+      default-dark: '#a9b1d6'
+
+    - id: tn-toolbar-icon-hover
+      title: Toolbar Icon Color (Hover)
+      type: variable-themed-color
+      format: hex
+      opacity: false
+      default-light: '#2e7de9'
+      default-dark: '#7aa2f7'
+
+    - id: tn-toolbar-item-hover
+      title: Toolbar Item Hover Background
+      type: variable-themed-color
+      format: hex
+      opacity: true
+      default-light: '#2e7de91f'
+      default-dark: '#7aa2f729'
+
+    - id: tn-toolbar-radius
+      title: Toolbar Corner Radius
+      type: variable-number-slider
+      default: 8
+      min: 0
+      max: 24
+      step: 1
+      format: px
+
 */
 
 /* =========================================
@@ -477,6 +606,42 @@ body.theme-dark {
 	--code-tag: #f7768e;
 	--code-value: #e0af68;
 	--code-important: #ff9e64;
+
+	/* --- КНОПКИ --- */
+	--tn-button-bg: #292e42;
+	--tn-button-bg-hover: #3b4261;
+	--tn-button-text: #c0caf5;
+	--tn-button-border: #3b4261;
+	--tn-button-accent-bg: #7aa2f7;
+	--tn-button-accent-bg-hover: #2ac3de;
+	--tn-button-accent-text: #1a1b26;
+	--tn-button-radius: 4px;
+
+	/* --- ПАНЕЛЬ РЕДАКТИРОВАНИЯ (Editing Toolbar) --- */
+	--tn-toolbar-bg: #1f2335;
+	--tn-toolbar-border: #3b4261;
+	--tn-toolbar-icon: #a9b1d6;
+	--tn-toolbar-icon-hover: #7aa2f7;
+	--tn-toolbar-item-hover: rgba(122, 162, 247, 0.16);
+	--tn-toolbar-radius: 8px;
+
+	/* --- СИСТЕМНЫЕ ПЕРЕМЕННЫЕ OBSIDIAN --- */
+	--background-primary-rgb: 26, 27, 38;
+	--background-primary-alt-rgb: 31, 35, 53;
+	--background-secondary-rgb: 22, 22, 30;
+	--interactive-normal: var(--tn-button-bg);
+	--interactive-hover: var(--tn-button-bg-hover);
+	--interactive-accent-rgb: 122, 162, 247;
+	--background-modifier-hover: rgba(122, 162, 247, 0.12);
+	--background-modifier-active-hover: rgba(122, 162, 247, 0.2);
+	--background-modifier-border-hover: #3b4261;
+	--background-modifier-border-focus: #7aa2f7;
+	--background-modifier-error: #f7768e;
+	--background-modifier-error-hover: #e05a72;
+	--icon-color: var(--text-muted);
+	--icon-color-hover: var(--text-accent);
+	--icon-color-active: var(--text-accent);
+	--text-error: #f7768e;
 }
 
 /* --- СВЕТЛАЯ ТЕМА (Tokyo Night Day) --- */
@@ -526,6 +691,42 @@ body.theme-light {
 	--code-tag: #f52a65;
 	--code-value: #8c6c3e;
 	--code-important: #b15c00;
+
+	/* --- КНОПКИ --- */
+	--tn-button-bg: #d0d5e3;
+	--tn-button-bg-hover: #c4c8da;
+	--tn-button-text: #3760bf;
+	--tn-button-border: #b6bcd3;
+	--tn-button-accent-bg: #2e7de9;
+	--tn-button-accent-bg-hover: #1b52c4;
+	--tn-button-accent-text: #e1e2e7;
+	--tn-button-radius: 4px;
+
+	/* --- ПАНЕЛЬ РЕДАКТИРОВАНИЯ (Editing Toolbar) --- */
+	--tn-toolbar-bg: #d0d5e3;
+	--tn-toolbar-border: #b6bcd3;
+	--tn-toolbar-icon: #6172b0;
+	--tn-toolbar-icon-hover: #2e7de9;
+	--tn-toolbar-item-hover: rgba(46, 125, 233, 0.12);
+	--tn-toolbar-radius: 8px;
+
+	/* --- СИСТЕМНЫЕ ПЕРЕМЕННЫЕ OBSIDIAN --- */
+	--background-primary-rgb: 225, 226, 231;
+	--background-primary-alt-rgb: 208, 213, 227;
+	--background-secondary-rgb: 233, 233, 237;
+	--interactive-normal: var(--tn-button-bg);
+	--interactive-hover: var(--tn-button-bg-hover);
+	--interactive-accent-rgb: 46, 125, 233;
+	--background-modifier-hover: rgba(46, 125, 233, 0.12);
+	--background-modifier-active-hover: rgba(46, 125, 233, 0.18);
+	--background-modifier-border-hover: #b6bcd3;
+	--background-modifier-border-focus: #2e7de9;
+	--background-modifier-error: #f52a65;
+	--background-modifier-error-hover: #d81b52;
+	--icon-color: var(--text-muted);
+	--icon-color-hover: var(--text-accent);
+	--icon-color-active: var(--text-accent);
+	--text-error: #f52a65;
 }
 
 /* =========================================
@@ -539,6 +740,9 @@ body {
 	--table-border-width: 1px;
 	--table-header-font-weight: bold;
 	--hr-thickness: 2px;
+	--button-radius: var(--tn-button-radius, 4px);
+	--input-shadow: none;
+	--input-shadow-hover: none;
 }
 
 /* Убираем тени у меню, модалок и всплывающих окон */
@@ -921,4 +1125,149 @@ body.is-mobile .app-container {
 
 body.is-mobile .modal {
     padding-top: 15px !important;
+}
+
+/* =========================================
+   08. КНОПКИ И ПАНЕЛЬ РЕДАКТИРОВАНИЯ
+   ========================================= */
+
+/* --- ОБЫЧНЫЕ КНОПКИ --- */
+button:not(.clickable-icon) {
+	background-color: var(--tn-button-bg) !important;
+	color: var(--tn-button-text) !important;
+	border: none !important;
+	border-radius: var(--tn-button-radius) !important;
+	box-shadow: inset 0 0 0 1px var(--tn-button-border) !important;
+	font-weight: var(--font-semibold);
+	transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+@media (hover: hover) {
+	button:not(.clickable-icon):hover {
+		background-color: var(--tn-button-bg-hover) !important;
+		color: var(--tn-button-text) !important;
+		box-shadow: inset 0 0 0 1px var(--tn-button-accent-bg) !important;
+	}
+}
+
+button:not(.clickable-icon):active,
+button:not(.clickable-icon).mobile-tap {
+	background-color: var(--tn-button-accent-bg) !important;
+	color: var(--tn-button-accent-text) !important;
+	box-shadow: none !important;
+}
+
+button:not(.clickable-icon):focus-visible {
+	box-shadow:
+		inset 0 0 0 1px var(--tn-button-accent-bg),
+		0 0 0 2px color-mix(in srgb, var(--tn-button-accent-bg) 35%, transparent) !important;
+}
+
+button:not(.clickable-icon):disabled,
+button:not(.clickable-icon)[aria-disabled="true"] {
+	opacity: 0.55 !important;
+}
+
+/* --- АКЦЕНТНАЯ КНОПКА (mod-cta) --- */
+button.mod-cta {
+	background-color: var(--tn-button-accent-bg) !important;
+	color: var(--tn-button-accent-text) !important;
+	box-shadow: none !important;
+}
+
+@media (hover: hover) {
+	button.mod-cta:hover {
+		background-color: var(--tn-button-accent-bg-hover) !important;
+		color: var(--tn-button-accent-text) !important;
+	}
+}
+
+/* --- ОПАСНЫЕ / ПРЕДУПРЕЖДАЮЩИЕ КНОПКИ --- */
+button.mod-warning {
+	background-color: var(--background-modifier-error) !important;
+	color: var(--text-on-accent) !important;
+	box-shadow: none !important;
+}
+
+@media (hover: hover) {
+	button.mod-warning:hover {
+		background-color: var(--background-modifier-error-hover) !important;
+	}
+}
+
+button.mod-destructive {
+	background-color: transparent !important;
+	color: var(--text-error) !important;
+	box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--text-error) 45%, transparent) !important;
+}
+
+/* --- КНОПКИ-ИКОНКИ --- */
+.clickable-icon {
+	border-radius: var(--tn-button-radius) !important;
+}
+
+@media (hover: hover) {
+	.clickable-icon:hover {
+		color: var(--text-accent) !important;
+	}
+}
+
+/* --- ПАНЕЛЬ РЕДАКТИРОВАНИЯ (Editing Toolbar plugin) --- */
+body #editingToolbarModalBar,
+body #editingToolbarPopoverBar {
+	background-color: color-mix(in srgb, var(--tn-toolbar-bg) 92%, transparent) !important;
+	border: 1px solid var(--tn-toolbar-border) !important;
+	border-radius: var(--tn-toolbar-radius) !important;
+	box-shadow: none !important;
+	padding: 2px 4px !important;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+
+body :is(#editingToolbarModalBar, #editingToolbarPopoverBar) :is(button.editingToolbarCommandItem, button[class^="editingToolbarCommandsubItem"]):not(.editingToolbar-Divider-Line) {
+	background-color: transparent !important;
+	color: var(--tn-toolbar-icon) !important;
+	border: none !important;
+	border-radius: calc(var(--tn-toolbar-radius) / 2) !important;
+	box-shadow: none !important;
+}
+
+body :is(#editingToolbarModalBar, #editingToolbarPopoverBar) :is(button.editingToolbarCommandItem, button[class^="editingToolbarCommandsubItem"]) svg {
+	color: inherit !important;
+}
+
+@media (hover: hover) {
+	body :is(#editingToolbarModalBar, #editingToolbarPopoverBar) :is(button.editingToolbarCommandItem, button[class^="editingToolbarCommandsubItem"]):not(.editingToolbar-Divider-Line):hover {
+		background-color: var(--tn-toolbar-item-hover) !important;
+		color: var(--tn-toolbar-icon-hover) !important;
+		box-shadow: none !important;
+	}
+}
+
+body :is(#editingToolbarModalBar, #editingToolbarPopoverBar) :is(button.editingToolbarCommandItem, button[class^="editingToolbarCommandsubItem"]):focus-visible {
+	background-color: var(--tn-toolbar-item-hover) !important;
+	color: var(--tn-toolbar-icon-hover) !important;
+	box-shadow: none !important;
+}
+
+/* Выпадающие меню внутри панели */
+body :is(#editingToolbarModalBar, #editingToolbarPopoverBar) button[class^="editingToolbarCommandsubItem"] > .subitem {
+	background-color: var(--tn-toolbar-bg) !important;
+	border: 1px solid var(--tn-toolbar-border) !important;
+	border-radius: var(--tn-toolbar-radius) !important;
+	box-shadow: none !important;
+}
+
+body :is(#editingToolbarModalBar, #editingToolbarPopoverBar) button[class^="editingToolbarCommandsubItem"] > .subitem button.menu-item {
+	background-color: transparent !important;
+	color: var(--tn-toolbar-icon) !important;
+	border-radius: calc(var(--tn-toolbar-radius) / 2) !important;
+	box-shadow: none !important;
+}
+
+@media (hover: hover) {
+	body :is(#editingToolbarModalBar, #editingToolbarPopoverBar) button[class^="editingToolbarCommandsubItem"] > .subitem button.menu-item:hover {
+		background-color: var(--tn-toolbar-item-hover) !important;
+		color: var(--tn-toolbar-icon-hover) !important;
+	}
 }
