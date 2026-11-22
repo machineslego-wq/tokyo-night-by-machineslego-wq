@@ -749,6 +749,7 @@ body {
 	--table-header-font-weight: bold;
 	--hr-thickness: 2px;
 	--button-radius: var(--tn-button-radius, 4px);
+	--clickable-icon-radius: var(--tn-button-radius, 4px);
 	--input-shadow: none;
 	--input-shadow-hover: none;
 }
@@ -1144,7 +1145,7 @@ button:not(.clickable-icon) {
 	background-color: var(--tn-button-bg) !important;
 	color: var(--tn-button-text) !important;
 	border: none !important;
-	border-radius: var(--tn-button-radius) !important;
+	border-radius: var(--button-radius) !important;
 	box-shadow: inset 0 0 0 1px var(--tn-button-border) !important;
 	font-weight: var(--font-semibold);
 	transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
@@ -1211,7 +1212,7 @@ button.mod-destructive {
 
 /* --- КНОПКИ-ИКОНКИ --- */
 .clickable-icon {
-	border-radius: var(--tn-button-radius) !important;
+	border-radius: var(--clickable-icon-radius) !important;
 }
 
 @media (hover: hover) {
@@ -1278,4 +1279,14 @@ body :is(#editingToolbarModalBar, #editingToolbarPopoverBar) button[class^="edit
 		background-color: var(--tn-toolbar-item-hover) !important;
 		color: var(--tn-toolbar-icon-hover) !important;
 	}
+}
+
+/* =========================================
+   09. МОБИЛЬНЫЕ TOUCH-РАДИУСЫ
+   ========================================= */
+
+/* На мобиле Obsidian использует крупные touch-радиусы.
+   Возвращаем их, чтобы кнопки и иконки оставались круглыми/пилюлей. */
+body.is-mobile {
+	--button-radius: var(--input-radius);
 }
