@@ -632,6 +632,10 @@ body.theme-dark {
 	--interactive-normal: var(--tn-button-bg);
 	--interactive-hover: var(--tn-button-bg-hover);
 	--interactive-accent-rgb: 122, 162, 247;
+	--background-modifier-form-field: var(--background-primary-alt);
+	--background-modifier-form-field-hover: var(--background-modifier-border);
+	--search-result-background: var(--background-primary-alt);
+	--search-icon-color: var(--text-muted);
 	--background-modifier-hover: rgba(122, 162, 247, 0.12);
 	--background-modifier-active-hover: rgba(122, 162, 247, 0.2);
 	--background-modifier-border-hover: #3b4261;
@@ -717,6 +721,10 @@ body.theme-light {
 	--interactive-normal: var(--tn-button-bg);
 	--interactive-hover: var(--tn-button-bg-hover);
 	--interactive-accent-rgb: 46, 125, 233;
+	--background-modifier-form-field: var(--background-primary-alt);
+	--background-modifier-form-field-hover: var(--background-modifier-border);
+	--search-result-background: var(--background-primary-alt);
+	--search-icon-color: var(--text-muted);
 	--background-modifier-hover: rgba(46, 125, 233, 0.12);
 	--background-modifier-active-hover: rgba(46, 125, 233, 0.18);
 	--background-modifier-border-hover: #b6bcd3;
